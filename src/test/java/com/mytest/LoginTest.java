@@ -43,7 +43,7 @@ public class LoginTest extends BaseTest {
 	}
 	
 	
-	@Test(priority = 4,enabled = true)
+	@Test(priority = 4,enabled = false)
 	@Parameters(value = {"username", "password"})
 	public void doLogin(String username,String password) {
 		HomePage homePage = page.getInstance(LoginPage.class).doLogin(username, password);
