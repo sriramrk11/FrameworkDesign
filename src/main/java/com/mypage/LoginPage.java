@@ -58,12 +58,11 @@ public class LoginPage extends BasePage {
 		return getVersionNumber(version);
 	}
 
-	/**
-	 * 
-	 * @param username
-	 * @param password
-	 * @return
-	 */
+	public void invalidLogin(String username, String password) {
+		getEmailId().sendKeys(username);
+		getPassword().sendKeys(password);
+		getLoginButton().click();
+	}
 
 	public HomePage doLogin(String username, String password) {
 		getEmailId().sendKeys(username);
